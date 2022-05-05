@@ -3,18 +3,10 @@
 
 import PackageDescription
 
-private let remoteDependencies: [Package.Dependency] = [
+private let dependencies: [Package.Dependency] = [
     .package(url: "https://github.com/huri000/SwiftEntryKit.git", from: "2.0.0"),
     .package(url: "https://github.com/Swinject/Swinject.git", from: "2.8.0")
 ]
-
-private let localDependencies: [Package.Dependency] = [
-    .package(url: "https://github.com/huri000/SwiftEntryKit.git", from: "2.0.0"),
-    .package(url: "https://github.com/Swinject/Swinject.git", from: "2.8.0")
-]
-
-let isDev = true
-private let dependencies = isDev ? localDependencies : remoteDependencies
 
 let package = Package(
     name: "AlertManager",
